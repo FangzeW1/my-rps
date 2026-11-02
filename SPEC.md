@@ -49,6 +49,6 @@ Use `unit`, `integration`, and `e2e` pytest markers. Run `.venv/bin/python check
 ### Work record
 
 - Issue: [RPS-001: Play a round](https://github.com/FangzeW1/my-rps/issues/1).
-- Pull request / CI: add actual URLs when they exist.
+- Pull request / CI: [PR #2](https://github.com/FangzeW1/my-rps/pull/2) / [Python checks run](https://github.com/FangzeW1/my-rps/actions/runs/41387270186).
 - Implementation: [game.py](game.py) implements one independent round. [Unit and request tests](tests/test_game.py) cover all nine outcomes and a real submitted Rock-versus-Paper loss. [Browser test](tests/e2e/test_round.py) covers a loss and replay to a win using real rules.
 - Checks: Full `.venv/bin/python check.py` passed Black, Pylint, 23 non-browser tests, and 6 Chromium tests. Reviewed the diff and new test files against this spec; existing checks and configuration are unchanged. Student browser observation: chose Rock, computer chose Paper, and the page displayed **Computer wins**; the student explained that paper beats rock. Student keyboard/replay observation: Tab cycled through the move buttons and browser controls; Enter on a selected move started a new round and displayed both moves and a result. The student also identified that the Rock-versus-Paper unit case would catch an incorrect result or reversed player/computer perspectives. Browser automation does not establish every aspect of usability or application performance.
